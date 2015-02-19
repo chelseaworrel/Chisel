@@ -9,11 +9,24 @@ class Chisel
     #do this for each thing we are calling
   end
 
-  # def line_split(string)
-  #   puts string.split("/n").count
-  #
-  # end
+
+  def line_split(string)
+     string.split("\n")
+  end
+
+  def has_an_astric
+
+  end
+
+
+ # def has_a_paragraph(document)
+ #   if document.include("\n")
+ #       document.split
+ #     end
+ # end
+
 end
+
 
 #use sub! to change symbols like <h1> </h1> and change them individually
 #so basically: your text is going to remain the same, you need to make sure it creates
@@ -22,4 +35,4 @@ end
 #symbols, example: #, ##, <h1>, * , probably use a map, select, or find enumerable
 #with an if * sub <em> : rememember that it is going to go over the whole document (iterate)
 #over the document and it will change the first instance of * to <em> while changing the next
-#instance of * with </em> using sub! 
+#instance of * with </em> using sub!
