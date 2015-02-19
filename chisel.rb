@@ -2,6 +2,7 @@
 #parser: analyze (a string or text) into logical syntactic components.
 
 class Chisel
+  parsing = []
 
   def parse(text)
     text.gsub(text, '<h1>My Life in Desserts</h1>')
@@ -9,14 +10,39 @@ class Chisel
     #do this for each thing we are calling
   end
 
+  def parse_subheader(text)
+    text.gsub(text, '<h2>Chapter 1: The Beginning</h2>')
+  end
 
   def line_split(string)
      string.split("\n")
   end
 
-  def has_an_astric
-
+  def sub_an_asterisk(string)
+      if string.include?("*")
+        string.sub!("*", "<em>")
+        string.sub!("*", "</em>")
+      end
+      string
   end
+
+  def has_an_amp
+    if string.include?("&")
+      string.sub!("&", "&amp;")
+      string.sub!("&", "&amp;")
+    end
+    string
+  end
+
+
+  def sub_a_double_asterick(string)
+      if string.include?("**")
+        string.sub!("**", "<strong>")
+        string.sub!("**", "</strong>")
+      end
+      string
+  end
+
 
 
  # def has_a_paragraph(document)
