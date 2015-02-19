@@ -8,4 +8,8 @@ class ChiselTest < Minitest::Test
     assert Chisel
   end
 
+  def turn_header_into_html
+    header = Chisel.new
+    assert_equal "'<h1>My Life in Desserts</h1>'", header.gsub
+  end
 end
